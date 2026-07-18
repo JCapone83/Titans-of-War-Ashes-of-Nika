@@ -1,0 +1,23 @@
+{
+  "name": "titans-of-constantinople-ashes-of-nika",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A historical city-building strategy game about rebuilding Constantinople after the Nika revolt.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "balance": "node scripts/balance-report.mjs",
+    "test": "node --test",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.5"
+  }
+}
