@@ -239,10 +239,28 @@ button:focus-visible, summary:focus-visible { outline: 2px solid #f2c95f; outlin
 .network-advice { color: #7cb4cc; }
 
 .project-list { min-width: 0; display: grid; grid-template-columns: repeat(8, minmax(92px, 1fr)); gap: 6px; overflow-x: auto; }
-.project-list button { min-width: 92px; padding: 5px; overflow: hidden; border: 1px solid #36413f; border-radius: 3px; background: #141a1b; cursor: pointer; text-align: left; }
+.project-list button { min-width: 92px; padding: 5px; overflow: hidden; border: 1px solid #36413f; border-radius: 3px; background: #141a1b; box-shadow: 0 3px 9px rgba(0,0,0,.28); cursor: pointer; text-align: left; }
 .project-list button:hover:not(:disabled), .project-list button.selected { border-color: var(--gold); background: #20201a; }
 .project-list button:disabled { opacity: .48; cursor: not-allowed; }
-.project-sprite { display: block; width: 100%; height: 66px; background-repeat: no-repeat; background-size: 800% 100%; background-color: #26302f; }
+.project-sprite {
+  display: block;
+  width: 100%;
+  height: 66px;
+  border: 1px solid #35403e;
+  background-repeat: no-repeat;
+  background-size: 800% 176%;
+  background-position-y: 48% !important;
+  background-color: #202827;
+  box-shadow: inset 0 -1px rgba(209,168,76,.22), 0 5px 12px rgba(0,0,0,.32);
+  filter: contrast(1.12) saturate(1.08) brightness(1.04);
+  transform-origin: center 70%;
+  transition: transform 150ms ease, background-size 150ms ease, filter 150ms ease;
+}
+.project-list button:hover:not(:disabled) .project-sprite, .project-list button.selected .project-sprite {
+  background-size: 800% 188%;
+  filter: contrast(1.16) saturate(1.12) brightness(1.08);
+  transform: translateY(-1px) scale(1.025);
+}
 .project-list button > span:not(.project-sprite) { display: block; margin-top: 5px; }
 .project-list strong, .project-list small { display: block; }
 .project-list strong { font-size: 9px; text-transform: uppercase; white-space: nowrap; }
